@@ -67,3 +67,13 @@ yarn add react-native-reanimated react-native-gesture-handler react-native-scree
   ```sh
   yarn add react-navigation-stack @react-native-community/masked-view
   ```
+
+---
+
+Add Styled Components to the project:
+
+1 - Install the library:
+
+```sh
+yarn add styled-components
+```
