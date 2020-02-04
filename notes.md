@@ -77,3 +77,13 @@ Add Styled Components to the project:
 ```sh
 yarn add styled-components
 ```
+
+---
+
+Add Async storage library to store the users data:
+
+```sh
+yarn add @react-native-community/async-storage
+```
+
+---
