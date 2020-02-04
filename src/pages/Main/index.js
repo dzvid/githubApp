@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-community/async-storage';
-import { Keyboard, ActivityIndicator } from 'react-native';
+import { Keyboard, ActivityIndicator, ToastAndroid } from 'react-native';
 
 import {
   Container,
@@ -19,6 +19,12 @@ import {
 } from './styles';
 
 import api from '../../services/api';
+
+const LOG_MSGS = {
+  USER_FOUND: 'Usuário salvo!',
+  USER_NOT_FOUND: 'Usuário não encontrado!',
+  FAILED_REQUEST: 'Falha na requisição!',
+};
 
 export default class Main extends Component {
   static navigationOptions = {
@@ -76,13 +82,31 @@ export default class Main extends Component {
         newUser: '',
         loading: false,
       });
+
+      ToastAndroid.showWithGravity(
+        LOG_MSGS.USER_FOUND,
+        ToastAndroid.SHORT,
+        ToastAndroid.CENTER
+      );
     } catch (error) {
+      if (error.response && error.response.status === 404) {
+        ToastAndroid.showWithGravity(
+          LOG_MSGS.USER_NOT_FOUND,
+          ToastAndroid.SHORT,
+          ToastAndroid.CENTER
+        );
+      } else {
+        ToastAndroid.showWithGravity(
+          LOG_MSGS.FAILED_REQUEST,
+          ToastAndroid.SHORT,
+          ToastAndroid.CENTER
+        );
+      }
+
       this.setState({
         newUser: '',
         loading: false,
       });
-
-      console.tron.log('Não foi possível localizar o usuário');
     }
 
     // Hide the keyboard after calling the API
