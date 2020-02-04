@@ -28,4 +28,42 @@ yarn add eslint -D
 yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
 ```
 
-3 -
+---
+
+Debug using Reactotron:
+
+1 - Install the client app [https://github.com/infinitered/reactotron](https://github.com/infinitered/reactotron)
+
+2 - Add reactotron as dependencie:
+
+```sh
+yarn add reactotron-react-native
+```
+
+3 - Create a reactotron configuration file at src/config/ReactotronConfig.js:
+
+```js
+```
+
+---
+
+React native navigation:
+
+1 - Create a file src/routes.js
+
+2 - Add the react navigation library:
+
+```sh
+yarn add react-navigation
+```
+
+- Install the dependencies:
+
+```sh
+yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+```
+
+- For stack navigation, install the libreary:
+  ```sh
+  yarn add react-navigation-stack @react-native-community/masked-view
+  ```
