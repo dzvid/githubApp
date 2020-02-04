@@ -14,8 +14,10 @@ import {
   Avatar,
   Name,
   Bio,
+  Options,
   ProfileButton,
   ProfileButtonText,
+  DeleteUser,
 } from './styles';
 
 import api from '../../services/api';
@@ -113,6 +115,14 @@ export default class Main extends Component {
     Keyboard.dismiss();
   };
 
+  handleDeleteUser = login => {
+    const { users } = this.state;
+
+    const resultDelete = users.filter(user => user.login !== login);
+
+    this.setState({ users: resultDelete });
+  };
+
   handleNavigate = user => {
     const { navigation } = this.props;
 
@@ -153,9 +163,14 @@ export default class Main extends Component {
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>
 
-              <ProfileButton onPress={() => this.handleNavigate(item)}>
-                <ProfileButtonText>Ver perfil</ProfileButtonText>
-              </ProfileButton>
+              <Options>
+                <ProfileButton onPress={() => this.handleNavigate(item)}>
+                  <ProfileButtonText>Ver perfil</ProfileButtonText>
+                </ProfileButton>
+                <DeleteUser onPress={() => this.handleDeleteUser(item.login)}>
+                  <Icon name="delete" size={20} color="#fff" />
+                </DeleteUser>
+              </Options>
             </User>
           )}
         />
