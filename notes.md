@@ -68,6 +68,11 @@ yarn add react-native-reanimated react-native-gesture-handler react-native-scree
   yarn add react-navigation-stack @react-native-community/masked-view
   ```
 
+The navigation is executed using the navigate method in the navigation prop.
+The parameters that the navigate method receives are the destinatary page and
+respective data to be passed to the page. The data can be retrieved using the getParam
+method or acessing the navigation.state.params;
+
 ---
 
 Add Styled Components to the project:

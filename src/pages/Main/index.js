@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { PropTypes } from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-community/async-storage';
 import { Keyboard, ActivityIndicator } from 'react-native';
@@ -25,7 +25,7 @@ export default class Main extends Component {
     title: 'Usuários',
   };
 
-  static PropTypes = {
+  static propTypes = {
     navigation: PropTypes.shape({
       navigate: PropTypes.func,
     }).isRequired,
