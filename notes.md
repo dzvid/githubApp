@@ -87,3 +87,9 @@ yarn add @react-native-community/async-storage
 ```
 
 ---
+
+Validate the proptypes:
+
+```sh
+yarn add prop-types
+```
