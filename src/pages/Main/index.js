@@ -88,20 +88,20 @@ export default class Main extends Component {
       ToastAndroid.showWithGravity(
         LOG_MSGS.USER_FOUND,
         ToastAndroid.SHORT,
-        ToastAndroid.CENTER
+        ToastAndroid.TOP
       );
     } catch (error) {
       if (error.response && error.response.status === 404) {
         ToastAndroid.showWithGravity(
           LOG_MSGS.USER_NOT_FOUND,
           ToastAndroid.SHORT,
-          ToastAndroid.CENTER
+          ToastAndroid.TOP
         );
       } else {
         ToastAndroid.showWithGravity(
           LOG_MSGS.FAILED_REQUEST,
           ToastAndroid.SHORT,
-          ToastAndroid.CENTER
+          ToastAndroid.TOP
         );
       }
 
