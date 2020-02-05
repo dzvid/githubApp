@@ -31,7 +31,7 @@
   <h3 align="center">githubApp</h3>
 
   <p align="center">
-    App built during the Rocketseat's bootcamp.
+    App built using React Native during the Rocketseat's bootcamp.
     <br />
     <a href="https://github.com/tukno/githubApp"><strong>Explore the docs »</strong></a>
     <br />
