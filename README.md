@@ -118,7 +118,7 @@ npm install npm@latest -g
 
 ### Installation
 
-The following instructions are for Windows/Linux systems.
+The following instructions are for Linux systems.
 
 `Disclaimer: I dont have a Macbook to test in iOS, but most of the commands are supposed to be the same.`
 
